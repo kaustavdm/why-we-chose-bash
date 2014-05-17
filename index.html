@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US" class="fade nonmozilla">
+<!--
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!--
+  If you want no numbers on the slides add a "nonumbers" class
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another.
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Why we chose Bash to write ourCI scripts at FusionCharts</title>
+<!--
+  If you upload your slides to the web, ensure that you have
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+</head>
+<body class="list nonmozilla">
+  <header class="caption">
+    <h1>Why we chose Bash to write our CI scripts at FusionCharts</h1>
+    <p class="footer">
+        Kaustav Das Modak, Dev. Evangelist, FusionCharts,
+      <a href="http://twitter.com/kaustavdm">@kaustavdm</a><br>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstract: </strong>
+       We wanted to have a minimalist, yet future-proof CI system. We wanted to avoid abstractions and get down to a deeper level. That is why we choose Bash, and trapping errors in our CI system is almost a no-brainer now.
+    </p>
+  </aside>
+
+<!--
+    Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID
+  to allow for bookmarking and target jumping.
+-->
+
+  <div id="cover" class="slide oneline"><div>
+    <section>
+      <header>
+          <h2>CI scripts in Bash<br>at FusionCharts.<br><br>Why!?</h2>
+      </header>
+      <small class="byline">
+        Kaustav Das Modak, Dev. Evangelist, FusionCharts
+      </small>
+      <footer class="notes">
+        We wanted to have a minimalist CI system that we knew inside out. We wanted more control.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="abstractions" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Avoid abstractions</h2>
+      </header>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="insideout" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Know the system<br> inside out</h2>
+      </header>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="handcrafted" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Handcrafted</h2>
+      </header>
+      <footer class="notes">
+          No external dependency
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="control" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Complete control</h2>
+      </header>
+      <footer class="notes">
+          You just need to know Bash and understand CI principles.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="structure" class="slide"><div>
+    <section>
+      <header>
+        <h2>How we structured the system?</h2>
+      </header>
+      <p><strong>npm test</strong><br>
+          | - <strong>lint</strong><br>
+          | - <strong>build</strong><br>
+          | - <strong>docs</strong><br>
+          | - <strong>verify</strong><br>
+      </p>
+      <footer class="notes">
+          NPM commands trigger Bash scripts.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="futureproof" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Future proof</h2>
+      </header>
+      <footer class="notes">
+          If we need more complexity, we can replace each script later on with Node or Grunt.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="discipline" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>You need discipline</h2>
+      </header>
+      <footer class="notes">
+          Bash can be very unwielding unless you have good discipline in your practise.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="howwemanaged" class="slide"><div>
+    <section>
+      <header>
+        <h2>How we managed?</h2>
+      </header>
+      <ul class="nobull">
+          <li>Each script begins with <code>set -e</code>.</li>
+          <li>Followed by a banner.</li>
+          <li>Followed by an ASCII art!</li>
+          <li>Inline comments in markdown, describing every step.</li>
+          <li>Use <code>echo</code> to provide progress reports.</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="validmarkdown" class="slide"><div>
+      <section>
+          <header>
+              <h2>Why Markdown?</h2>
+          </header>
+          <ul class="nobull">
+              <li>Take out all the code, leaving the comments.</li>
+              <li>Remove preceding "#" from the beginning of line.</li>
+              <li>The script will be a valid Markdown file, describing a process.</li>
+          </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="soundscrazy" class="slide"><div>
+      <section>
+          <header>
+              <h2>Sounds crazy?</h2>
+          </header>
+          <p><strong>It is great for medium-sized CI projects, till you know what you are doing.</strong></p>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+          <h2>Thanks!</h2>
+      </header>
+      <ul class="nobull">
+          <li>Throw questions at <a href="https://twitter.com/kaustavdm">@kaustavdm</a>.</li>
+      </ul>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
